@@ -40,3 +40,10 @@ contract Fallout {
     return allocations[allocator];
   }
 }
+
+
+
+
+
+
+
