@@ -1,2 +1,2 @@
 # Ethernaut
-Learning to hack/audit Ethereum smart contracts with [Ethernaut](https://ethernaut.openzeppelin.com/)
+Learning to hack/audit Solidity smart contracts on Ethereum with [Ethernaut](https://ethernaut.openzeppelin.com/)
