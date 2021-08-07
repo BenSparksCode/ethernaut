@@ -45,15 +45,3 @@ contract Instance {
     return cleared;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -33,7 +33,3 @@ contract CoinFlip {
     }
   }
 }
-
-
-
-

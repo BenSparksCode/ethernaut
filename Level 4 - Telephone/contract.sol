@@ -14,6 +14,3 @@ contract Telephone {
     }
   }
 }
-
-
-

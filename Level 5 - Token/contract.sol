@@ -20,10 +20,3 @@ contract Token {
     return balances[_owner];
   }
 }
-
-
-
-
-
-
-

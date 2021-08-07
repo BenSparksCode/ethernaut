@@ -42,8 +42,3 @@ contract Fallback {
     owner = msg.sender;
   }
 }
-
-
-
-
-

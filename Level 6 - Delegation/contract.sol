@@ -30,15 +30,3 @@ contract Delegation {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
